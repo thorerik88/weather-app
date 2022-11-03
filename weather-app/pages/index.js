@@ -2,6 +2,9 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+
+import WeatherApp from './WeatherApp'
+
 import { apiKey } from '../constants/apikey'
 import { generateLocation } from '../components/generateLocation'
 import { createContext, useEffect, useState } from 'react'
@@ -19,28 +22,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-          <div>
-            <ul>
-              <li>
-                <Link href="#" onClick={generateLocation}>Open Weather App</Link>
-              </li>
-            </ul>
-            <p id="demo"></p>
-          </div>
+          <WeatherApp />
         
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        
       </footer>
     </div>
   )
