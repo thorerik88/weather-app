@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 
 import WeatherApp from './WeatherApp'
 
 import { apiKey } from '../constants/apikey'
-import { generateLocation } from '../components/generateLocation'
+import { generateLocation } from '../location/generateLocation'
 import { createContext, useEffect, useState } from 'react'
 import { load } from '../storage/storage'
 

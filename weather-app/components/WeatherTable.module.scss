@@ -1,0 +1,36 @@
+@import '../styles/variables.module.scss';
+
+.table {
+  position: relative;
+
+  .tableWrapper {
+    display: flex;
+    justify-content: center;
+
+    .tableDates, .tableNight, .tableMorning, .tableAfternoon, .tableEvening, .tableTemp, .tableRainfall, .tableWind {
+
+      p {
+        color: $color-primary;
+        border-top: 1px solid $color-grey;
+        margin: 5px 0px;
+        padding: 15px 20px;
+        font-size: 20px;
+      }
+
+      p:first-of-type {
+        color: $color-secondary;
+        border-top: none;
+      }
+    }
+    .tableDates {
+
+      p {
+        color: $color-secondary;
+      }
+
+      p:first-of-type {
+        visibility: hidden;
+      }
+    }
+  }
+}
